@@ -1,0 +1,66 @@
+:root {
+    --oxford-blue: rgb(43, 46, 125);
+    --eerie-black: #212121ff;
+    --vermilion: rgb(181, 59, 50);
+    --burnt-umber: #8b2d2dff;
+}
+
+/* Estilo específico para la página de la historieta */
+body {
+    background-color: var(--oxford-blue); /* Fondo específico para esta página */
+    color: white;
+}
+
+header h1 {
+    color: var(--vermilion); /* Color del título */
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5rem; /* Ajusta el tamaño del título */
+    margin: 20px 0; /* Espaciado del título */
+}
+
+/* Ajustes para la sección del cómic */
+#comic {
+    display: flex;
+    flex-wrap: nowrap; /* Mantiene las imágenes en una sola fila */
+    overflow-x: auto; /* Scroll horizontal */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    justify-content: flex-start;
+    align-items: center; /* Centra verticalmente las imágenes */
+    padding: 10px;
+    background-color: var(--eerie-black); /* Fondo oscuro para la sección del cómic */
+    border: 2px solid var(--vermilion); /* Borde alrededor del cómic */
+}
+
+/* Ajustes para las imágenes */
+#comic img {
+    height: 90vh; /* Ajusta la altura al 90% de la pantalla */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espaciado entre imágenes */
+}
+
+#comic img:last-child {
+    margin-right: 0; /* Elimina el margen de la última imagen */
+}
+
+
+footer {
+    background-color: var(--oxford-blue);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #comic img {
+        height: 80vh; /* Ajuste de altura para pantallas más pequeñas */
+    }
+}

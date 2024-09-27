@@ -1,0 +1,120 @@
+:root {
+    --oxford-blue: rgba(43, 46, 125, 0.62);
+    --eerie-black: #212121ff;
+    --vermilion: #f44336ff;
+    --burnt-umber: #8b2d2dff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--eerie-black);
+    color: white;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: var(--vermilion);
+    padding: 20px 0;
+    font-size: 2.5rem;
+}
+
+section.timeline-section {
+    display: flex;
+    height: 100vh; /* Cada sección ocupará toda la pantalla */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    scroll-snap-align: start;
+    background-color: var(--oxford-blue);
+    border-bottom: 2px solid var(--burnt-umber);
+}
+
+.left {
+    flex-direction: row;
+}
+
+.right {
+    flex-direction: row-reverse;
+}
+
+.section-content {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.section-image {
+    width: 30%; /* Ancho del contenedor de la imagen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--vermilion);
+    border-radius: 10px;
+    background-color: var(--eerie-black);
+    padding: 10px;
+}
+
+.section-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.section-image h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: var(--vermilion);
+    text-align: center;
+}
+
+.section-text {
+    width: 60%; /* Ancho del contenedor de texto */
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.2rem;
+    background-color: var(--oxford-blue);
+    border: 3px solid var(--burnt-umber);
+    border-radius: 10px;
+}
+
+/* Añadir un poco de espacio entre cada sección */
+section.timeline-section + section.timeline-section {
+    margin-top: 20px;
+}
+
+
+footer {
+    background-color: var(--oxford-blue);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    section.timeline-section {
+        flex-direction: column; /* Coloca los elementos uno encima del otro */
+        height: auto;
+    }
+
+    .section-image, .section-text {
+        width: 100%; /* Ocupa el 100% en pantallas pequeñas */
+    }
+}

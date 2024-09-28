@@ -44,6 +44,40 @@ header h1 {
 }
 
 
+nav {
+    background-color: var(--eerie-black);
+    padding: 20px 0; /* Mayor espacio arriba y abajo del menú */
+    margin-top: 20px; /* Separación entre la imagen y el menú */
+}
+
+.link-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los botones se agrupen verticalmente si es necesario */
+}
+
+.link-list li {
+    margin: 5px 0; /* Espacio entre los botones en la vista vertical */
+}
+
+.link-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.link-list li a:hover {
+    color: var(--burnt-umber);
+    border-color: var(--burnt-umber);
+}
+
 footer {
     background-color: var(--oxford-blue);
     color: white;

@@ -93,6 +93,40 @@ section.timeline-section + section.timeline-section {
 }
 
 
+nav {
+    background-color: var(--eerie-black);
+    padding: 20px 0; /* Mayor espacio arriba y abajo del menú */
+    margin-top: 20px; /* Separación entre la imagen y el menú */
+}
+
+.link-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los botones se agrupen verticalmente si es necesario */
+}
+
+.link-list li {
+    margin: 5px 0; /* Espacio entre los botones en la vista vertical */
+}
+
+.link-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.link-list li a:hover {
+    color: var(--burnt-umber);
+    border-color: var(--burnt-umber);
+}
+
 footer {
     background-color: var(--oxford-blue);
     color: white;
@@ -105,6 +139,20 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.section-image img {
+    max-width: 100%; /* Para que las imágenes dentro de las secciones se ajusten al 100% del contenedor */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Para la imagen al final de la página */
+section.source img {
+    width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+    height: auto; /* Mantiene la proporción original */
+    object-fit: cover; /* Se ajusta al contenedor sin deformarse */
+    display: block; /* Evita que la imagen cause espacios en blanco extraños */
 }
 
 /* Media queries para pantallas más pequeñas */
